@@ -1006,13 +1006,14 @@
             #contact { grid-template-columns: 1fr; }
             .nav-links, .nav-cta { display: none; }
             .nav-hamburger { display: flex; }
-            /* Service grid: drop to 2 cols, hide video panel */
+            /* Service grid: 2 cards side by side, video full-width below */
             .service-grid { grid-template-columns: 1fr 1fr; }
-            .service-video-panel { display: none; }
+            .service-video-panel { grid-column: 1 / -1; min-height: 260px; }
         }
         @media (max-width: 600px) {
             /* Service grid: single col on small screens */
             .service-grid { grid-template-columns: 1fr; }
+            .service-video-panel { grid-column: 1; min-height: 300px; }
             /* ── Hero headline: big & bold, fits on screen ── */
             .hero-headline {
                 font-size: clamp(2.1rem, 10vw, 3rem);
